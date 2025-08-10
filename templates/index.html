@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h2>Welcome to My Secure App</h2>
+{% if 'user' in session %}
+    <p>Hello, {{ session['user'] }}!</p>
+{% else %}
+    <p>Please register or log in to continue.</p>
+{% endif %}
+{% endblock %}
